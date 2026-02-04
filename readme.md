@@ -45,4 +45,4 @@ Then open `pymc_linear_regression.ipynb` and run all cells.
 ## Notes
 - This was tested on macOS with Python 3.12.
 
-- Installing with `uv` is unlikely to work on windows, but I dont have windows so don't know. Use `pixi` with windows.
+- Installing with `uv` is unlikely to work on windows, but I don't have windows so don't know. Use `pixi` with windows.
