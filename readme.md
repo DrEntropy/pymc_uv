@@ -5,6 +5,20 @@ It includes:
 - A simple linear regression demo notebook: `pymc_linear_regression.ipynb`
 - A BLAS sanity check via PyTensor’s `check_blas.py`
 
+## Requirements
+
+- **Xcode**
+- **Xcode Command Line Tools**: Install with `xcode-select --install`
+- **uv**: Install with `brew install uv` or follow instructions at https://docs.astral.sh/uv/
+- Ensure PyTensor can find a C++ compiler on macOS. Add this to `~/.pytensorrc`:
+```
+[global]
+cxx=/usr/bin/clang++
+```
+
+
+
+
 ## Setup
 From the repo root:
 
@@ -32,9 +46,5 @@ Then open `pymc_linear_regression.ipynb` and run all cells.
 
 ## Notes
 - This was tested on macOS with Python 3.12.
-- Ensure PyTensor can find a C++ compiler on macOS. Add this to `~/.pytensorrc`:
-```
-[global]
-cxx=/usr/bin/clang++
-```
-- This is unlikely to work on windows.
+
+- Installing with `uv` is unlikely to work on windows, but I dont have windows so don't know. Use `pixi` with windows.
