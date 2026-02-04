@@ -30,10 +30,8 @@ uv sync
 To test, use this:
 
 ```
-uv run python .venv/lib/python3.12/site-packages/pytensor/misc/check_blas.py
+uv run python check_blas.py
 ```
-
-Or whatever path is right (use `uv run python -c "import pytensor.misc.check_blas as cb; print(cb.__file__)"` to find the path).
 
 ## Notebook
 Launch Jupyter and open the demo notebook:
