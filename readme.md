@@ -32,4 +32,9 @@ Then open `pymc_linear_regression.ipynb` and run all cells.
 
 ## Notes
 - This was tested on macOS with Python 3.12.
+- Ensure PyTensor can find a C++ compiler on macOS. Add this to `~/.pytensorrc`:
+```
+[global]
+cxx=/usr/bin/clang++
+```
 - This is unlikely to work on windows.
