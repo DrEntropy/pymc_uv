@@ -42,6 +42,23 @@ uv run jupyter notebook
 
 Then open `pymc_linear_regression.ipynb` and run all cells.
 
+## Docker
+
+You can also run everything in a Docker container (no macOS-specific setup required):
+
+```
+docker build -t pymc-uv .
+docker run -p 8888:8888 pymc-uv
+```
+
+Then open the URL with token that Jupyter prints to the console.
+
+To run the BLAS check inside the container:
+
+```
+docker run pymc-uv uv run python check_blas.py
+```
+
 ## Notes
 - This was tested on macOS with Python 3.12.
 
