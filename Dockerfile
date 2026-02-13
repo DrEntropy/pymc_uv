@@ -5,8 +5,8 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends g++ libopenblas-dev && \
     rm -rf /var/lib/apt/lists/*
 
-# Configure PyTensor to use g++
-RUN mkdir -p /root && printf '[global]\ncxx=/usr/bin/g++\n' > /root/.pytensorrc
+# Configure PyTensor to use g++ and link directly to OpenBLAS
+RUN mkdir -p /root && printf '[global]\ncxx=/usr/bin/g++\n\n[blas]\nldflags=-lopenblas\n' > /root/.pytensorrc
 
 # Install uv
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /usr/local/bin/

@@ -30,7 +30,7 @@ uv sync
 To test, use this:
 
 ```
-uv run python check_blas.py
+uv run check_blas.py
 ```
 
 ## Notebook
@@ -56,7 +56,7 @@ Then open the URL with token that Jupyter prints to the console.
 To run the BLAS check inside the container:
 
 ```
-docker run pymc-uv uv run python check_blas.py
+docker run pymc-uv uv run check_blas.py
 ```
 
 ## Notes
